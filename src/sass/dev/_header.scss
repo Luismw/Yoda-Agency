@@ -1,0 +1,72 @@
+.main-header{
+    background-color: $first-color;
+    padding: 7px 0;
+
+    .container{
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .main-menu{
+                display: flex;
+                align-items: center;
+
+                @include to(md){
+                    display: none;
+                }
+
+                &__item{
+                    margin-right: 40px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    .link{
+                        color: $negro2;
+                        font-size: 14px;
+                        font-weight: 700;
+                        transition: all .3s;
+
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            .logo{
+                img{
+                    width: 100%;
+                    max-width: 150px;
+                }
+            }
+            .buttons-access{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 200px;
+
+                a{
+                    font-size: 11px;
+                    border-radius: 5px;
+                    padding: 6px 15px;
+                    transition: all .3s;
+                    font-weight: 500;
+                    font-family: $font-title;
+
+                    &.btn-signup{
+                        background-color: $negro2;
+                        border: 1px solid $negro2;
+                        color: $blanco;
+
+                        &:hover{
+                            background-color: transparent;
+                            color: $blanco;
+                            border-color: $blanco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+::selection {
+    background: $first-color;
+    color: $blanco;
+    text-shadow: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba($text,.1);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba($text,.2);
+}
+ 
+::-webkit-scrollbar-button {
+    // background: rgba($text,.8);
+}
+
+.ribbon{
+    position: absolute;
+    z-index: 2;
+    top: -50px;
+    right: -100px;
+    width: 90px;
+
+    @include to(1200px){
+        right: -50px;
+
+        @include to(1150px){
+            right: -15px;
+
+            @include to(900px){
+                display: none;
+            }
+        }
+    }
+}
